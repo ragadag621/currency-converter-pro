@@ -10,3 +10,11 @@ button {
     margin: 4px 2px;
     cursor: pointer;
 }
+div.container {
+    width: auto;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 12px #aaa;
+    word-wrap: break-word;
+}

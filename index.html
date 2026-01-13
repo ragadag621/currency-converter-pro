@@ -10,10 +10,24 @@
 
 <body>
     <button onclick="showMessage()">Click me</button>
+    <div id="fact-box" class="container">click the button above to bring a information...</div>
+
     <script>
-        function showMessage() {
-            alert("Hello, welcome to my website!");
+        async function showMessage() {
+            const box = document.getElementById('fact-box');
+            box.innerHTML = "Loading...";
+            try {
+                const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+                const data = await response.json();
+
+                box.innerHTML = `Base: ${data.base} <br> Date: ${data.date} <br> Rates: ${JSON.stringify(data.rates).slice(0, 100)}...`;
+                box.style.color = "green";
+            } catch (error) {
+                box.innerHTML = "Failed to load data.";
+                box.style.color = "red";
+            }
         }
+
     </script>
 
 
