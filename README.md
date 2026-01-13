@@ -26,7 +26,7 @@ The app is powered by the **ExchangeRate-API**, fetching live data to ensure the
 ### ⚙️ Installation & Usage
 1.  Clone the repository:
     ```bash
-    git clone [your-repository-link]
+    git clone https://github.com/ragadag621/currency-converter-pro.git
     ```
 2.  Open `index.html` in your browser (preferably using **Live Server** in VS Code).
 3.  Enter the amount in USD, select your target currency, and hit **Convert**!
